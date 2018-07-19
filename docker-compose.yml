@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    loadbalancer:
+        image: plgrazon/loadbalancer
+        ports:
+            - 8080:80
+        restart: always
+
+    # nginx:
+    #     depends_on:
+    #         - plgrazon/loadbalancer
+    #     image: nginx:alpine
+    #     restart: always
+    #
+    # apache:
+    #     depends_on:
+    #         - plgrazon/loadbalancer
+    #     image: http:alpine
+    #     restart: always
